@@ -1,0 +1,2 @@
+model_checkpoint_path: "/misc/lmbraid19/ilge/flownet/final/tensorflow_converted/DispNet3/CSS-ft-kitti/training/00__kitti.train__S_custom/checkpoints/snapshot-200000"
+all_model_checkpoint_paths: "/misc/lmbraid19/ilge/flownet/final/tensorflow_converted/DispNet3/CSS-ft-kitti/training/00__kitti.train__S_custom/checkpoints/snapshot-200000"

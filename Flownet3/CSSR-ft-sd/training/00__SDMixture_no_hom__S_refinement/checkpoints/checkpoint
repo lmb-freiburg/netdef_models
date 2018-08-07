@@ -1,0 +1,2 @@
+model_checkpoint_path: "/misc/lmbraid19/ilge/flownet/final/tensorflow_converted/FlowNet3/CSSR-ft-sd/training/00__SDMixture_no_hom__S_refinement/checkpoints/snapshot-175000"
+all_model_checkpoint_paths: "/misc/lmbraid19/ilge/flownet/final/tensorflow_converted/FlowNet3/CSSR-ft-sd/training/00__SDMixture_no_hom__S_refinement/checkpoints/snapshot-175000"

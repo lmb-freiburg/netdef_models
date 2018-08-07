@@ -1,0 +1,2 @@
+model_checkpoint_path: "/misc/lmbraid19/ilge/flownet/final/tensorflow_converted/DispNet3/CSS/training/00__flyingThings3D.train__S_short/checkpoints/snapshot-600000"
+all_model_checkpoint_paths: "/misc/lmbraid19/ilge/flownet/final/tensorflow_converted/DispNet3/CSS/training/00__flyingThings3D.train__S_short/checkpoints/snapshot-600000"
