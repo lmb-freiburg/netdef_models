@@ -1,10 +1,11 @@
 # netdef_models
 Repository for different network models related to flow/disparity from the following papers: 
 
+**NOTE: We only provide deployment code for these networks. We do not publish any training code and also do not off support about questions for training networks.**
+
 * **Occlusions, Motion and Depth Boundaries with a Generic Network for Disparity, Optical Flow or Scene Flow**  
 (E. Ilg and T. Saikia and M. Keuper and T. Brox published at ECCV 2018)  [[paper]](http://lmb.informatik.uni-freiburg.de/Publications/2018/ISKB18) [[video]](https://www.youtube.com/watch?v=SwOdSaBRysI)
 
-**NOTE: We only provide deployment code for these networks. We do not publish any training code and also do not off support about questions for training networks.**
 
 ## Setup
 * Install [tensorflow (1.4)](https://www.tensorflow.org/install/)
