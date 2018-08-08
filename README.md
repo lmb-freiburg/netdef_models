@@ -23,8 +23,10 @@ Repository for different network models related to flow/disparity from the follo
 
 ## Output formats
 
+The networks are executed using the controller.py scripts in the respective folders. Just running this controller will produce several output files in a folder (note that you can also obtain this output just as numpy arrays and write it to some custom files; see next section). 
+
 For optical flow we use the standard `.flo` format. 
-The other modalities use a custom binary format called `.float3`. To convert `.float3` files to numpy arrays, please use the
+The other modalities use a custom binary format called `.float3`. To read `.float3` files to numpy arrays, please use the
 netdef_slim.utils.io module.
 
 Example usage:
