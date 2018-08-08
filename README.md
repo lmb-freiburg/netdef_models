@@ -33,6 +33,18 @@ from netdef_slim.utils.io import read
 occ_file = 'occ.float3'
 occ_data = read(occ_file) # returns a numpy array
 ```
+## Controller eval
+The eval method of the controller writes to the disk by default.
+To avoid writing to disk, create a Controller object and use the `eval` method available in the `net_action` member variable.
+This can be useful if you want to process the output of our networks in memory and not incur additional disk I/O.
+
+Example usage:
+```
+import netdef_slim as nd
+nd.load_module('FlowNet3/css/controller.py')
+c = Controller() 
+out = c.net_actions.eval(img0, img1) 
+```
 ## License
 
 netdef_models is under the [GNU General Public License v3.0](LICENSE.txt)
