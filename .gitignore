@@ -17,4 +17,4 @@ __pycache__
 *.so
 db.sqlite3
 *.h5
-*snapshot*
+*/snapshot*
