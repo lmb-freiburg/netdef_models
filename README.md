@@ -21,6 +21,18 @@ Repository for different network models related to flow/disparity from the follo
   Use the following command to test the network on an image pair:
   `python3 controller.py image0_path image1_path out_dir`
 
+## Output formats
+
+For optical flow we use the standard `.flo` format. 
+The other modalities use a custom binary format called `.float3`. To convert `.float3` files to numpy arrays, please use the
+netdef_slim.utils.io module.
+
+Example usage:
+```
+from netdef_slim.utils.io import read 
+occ_file = 'occ.float3'
+occ_data = read(occ_file) # returns a numpy array
+```
 ## License
 
 netdef_models is under the [GNU General Public License v3.0](LICENSE.txt)
