@@ -3,12 +3,12 @@ Repository for different network models related to flow/disparity from the follo
 
 Occlusions, Motion and Depth Boundaries with a Generic Network for Disparity, Optical Flow or Scene Flow
 
-(E. Ilg and T. Saikia and M. Keuper and T. Brox published at CCV 2018)
+(E. Ilg and T. Saikia and M. Keuper and T. Brox published at ECCV 2018)
 
 http://lmb.informatik.uni-freiburg.de/Publications/2018/ISKB18
 
 ## Setup
-* Install [tensorflow](https://www.tensorflow.org/install/)
+* Install [tensorflow (1.4)](https://www.tensorflow.org/install/)
 * Compile and install [lmbspecialops](https://github.com/lmb-freiburg/lmbspecialops/tree/eccv18). Please use the branch `eccv18` instead of `master`.
 * Install [netdef_slim](https://github.com/lmb-freiburg/netdef_slim)
 
