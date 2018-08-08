@@ -3,7 +3,7 @@ Repository for different network models related to flow/disparity
 
 ## Setup
 * Install [tensorflow](https://www.tensorflow.org/install/)
-* Compile and install [lmbspecialops] (branch:eccv18)(https://github.com/lmb-freiburg/lmbspecialops/tree/eccv18)
+* Compile and install [lmbspecialops](https://github.com/lmb-freiburg/lmbspecialops/tree/eccv18). Please use the branch `eccv18` instead of `master`.
 * Install [netdef_slim](https://github.com/lmb-freiburg/netdef_slim)
 
 ## Running networks
