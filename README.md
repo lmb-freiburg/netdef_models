@@ -42,7 +42,7 @@ plt.imshow(occ_data[:,:,0])
 ```
 ## Controller eval
 The eval method of the controller writes to the disk by default.
-To avoid writing to disk, create a Controller object and use the `eval` method available in the `net_action` member variable.
+To avoid writing to disk, create a Controller object and use the `eval` method available in the `net_actions` member variable.
 This can be useful if you want to process the output of our networks in memory and not incur additional disk I/O.
 
 Example usage:
@@ -50,7 +50,15 @@ Example usage:
 import netdef_slim as nd
 nd.load_module('FlowNet3/css/controller.py')
 c = Controller() 
-out = c.net_actions.eval(img0, img1) 
+out = c.net_actions.eval(img0, img1)
+# out is an OrderedDict with the following structure
+#OrderedDict(['flow[0].fwd',     np.array[...],
+              'occ[0].fwd',      np.array[...],
+              'occ_soft[0].fwd', np.array[...],
+              'mb[0].fwd',       np.array[...],
+              'mb_soft[0].fwd',  np.array[...],
+              ])       
+
 ```
 ## License
 
