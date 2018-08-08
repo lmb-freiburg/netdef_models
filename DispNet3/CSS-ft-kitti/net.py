@@ -92,13 +92,6 @@ net = Network(
 )
 
 
-
-net = Network(
-	scale=1.0,
-        conv_upsample=False
-)
-
-
 def get_env():
     env = DispNet2f_Environment(net,)
     return env
