@@ -1,4 +1,4 @@
-# net_models
+# netdef_models
 Repository for different network models related to flow/disparity from the following papers: 
 
 * **Occlusions, Motion and Depth Boundaries with a Generic Network for Disparity, Optical Flow or Scene Flow**  
@@ -20,4 +20,4 @@ Repository for different network models related to flow/disparity from the follo
 
 ## License
 
-lmbspecialops is under the [GNU General Public License v3.0](LICENSE.txt)
+netdef_models is under the [GNU General Public License v3.0](LICENSE.txt)
