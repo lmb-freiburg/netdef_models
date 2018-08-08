@@ -8,7 +8,7 @@ Repository for different network models related to flow/disparity from the follo
 
 
 ## Setup
-* Install [tensorflow (1.4)](https://www.tensorflow.org/install/) (e.g. pip3 install tensorflow-gpu==1.4)
+* Install [tensorflow (1.4)](https://www.tensorflow.org/install/) (pip3 install tensorflow-gpu==1.4)
 * Compile and install [lmbspecialops](https://github.com/lmb-freiburg/lmbspecialops/tree/eccv18). Please use the branch `eccv18` instead of `master`
 * Install [netdef_slim](https://github.com/lmb-freiburg/netdef_slim)
 * Clone this repository
