@@ -1,12 +1,12 @@
 # net_models
 Repository for different network models related to flow/disparity
 
-# Setup
-* Install [tensorflow]()
-* Compile [lmbspecialops]()
-* Add [netdef_slim]() to your python path
+## Setup
+* Install [tensorflow](https://www.tensorflow.org/install/)
+* Compile and install [lmbspecialops](https://github.com/lmb-freiburg/lmbspecialops)
+* Install [netdef_slim](https://github.com/lmb-freiburg/netdef_slim)
 
-#Running networks
+## Running networks
 
 * Clone this repository.
 * Change your directory to the network directory (Eg: FlowNet3).
