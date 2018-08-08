@@ -1,10 +1,8 @@
 # net_models
 Repository for different network models related to flow/disparity from the following papers: 
 
-Occlusions, Motion and Depth Boundaries with a Generic Network for Disparity, Optical Flow or Scene Flow
-
-(E. Ilg and T. Saikia and M. Keuper and T. Brox published at ECCV 2018)
-
+Occlusions, Motion and Depth Boundaries with a Generic Network for Disparity, Optical Flow or Scene Flow  
+(E. Ilg and T. Saikia and M. Keuper and T. Brox published at ECCV 2018)  
 http://lmb.informatik.uni-freiburg.de/Publications/2018/ISKB18
 
 ## Setup
