@@ -6,6 +6,9 @@ Repository for different network models related to flow/disparity from the follo
 * **Occlusions, Motion and Depth Boundaries with a Generic Network for Disparity, Optical Flow or Scene Flow**  
 (E. Ilg and T. Saikia and M. Keuper and T. Brox published at ECCV 2018)  [[paper]](http://lmb.informatik.uni-freiburg.de/Publications/2018/ISKB18) [[video]](https://www.youtube.com/watch?v=SwOdSaBRysI)
 
+* **Uncertainty Estimates and Multi-Hypotheses Networks for Optical Flow**  
+(E. Ilg and Ö. Cicek and S. Galesso and A. Klein and O. Makansi and F. Hutter and T. Brox published at ECCV 2018)  [[paper]](https://lmb.informatik.uni-freiburg.de/Publications/2018/ICKMB18/) [[video]](https://www.youtube.com/watch?v=HvyovWSo8uE)
+
 
 ## Setup
 * Install [tensorflow (1.4)](https://www.tensorflow.org/install/) (pip3 install tensorflow-gpu==1.4)
