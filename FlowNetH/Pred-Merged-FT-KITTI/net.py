@@ -69,61 +69,7 @@ class FlowNetHMSS_Network(BaseNetwork):
                 )
             out_merge = arch.make_graph(input)
         
-        # refNet1
-        self._batch_norm = False
-        
-        pred_config = nd.PredConfig()
-        pred_config.add(nd.PredConfigId(type='flow', dir='fwd', offset=0, channels=2, scale=self._scale, dist=1))
-        pred_config.add(nd.PredConfigId(type='iul_b_log', dir='fwd', offset=0, channels=2, scale=self._scale, dist=1, mod_func=self.iul_b_log_sigmoid))
-        nd.log('pred_config:')
-        nd.log(pred_config)
-        
-        pred_config[0].mod_func = lambda x: nd.ops.add(x, nd.ops.resample(out_merge.final.flow[0][1].fwd, reference=x, type='LINEAR', antialias=False))
-        pred_config[1].mod_func = lambda x: nd.ops.add(x, nd.ops.resample(out_merge.final.iul_b_log[0][1].fwd, reference=x, type='LINEAR', antialias=False))
-        
-        flow_merged_fwd = nd.ops.resample(out_merge.final.flow[0][1].fwd, reference=data.img[0], type='LINEAR', antialias=False)
-        flow_merged_iul_b_log = nd.ops.resample(out_merge.final.iul_b_log[0][1].fwd, reference=data.img[0], type='LINEAR', antialias=False)
-        img1_warped_merged = nd.ops.warp(data.img[1], flow_merged_fwd)
-        input = nd.ops.concat([data.img[0], data.img[1],  flow_merged_fwd, flow_merged_iul_b_log, img1_warped_merged])
-        
-        with nd.Scope('refNet', **self.scope_args()):     
-            arch = Architecture_S(
-                num_outputs=pred_config.total_channels(),
-                disassembling_function=pred_config.disassemble,
-                conv_upsample=True,
-                loss_function= None,
-                channel_factor=self._channel_factor
-                )
-            out_ref = arch.make_graph(input)
-            
-        # refNet2
-        self._batch_norm = False
-        
-        pred_config = nd.PredConfig()
-        pred_config.add(nd.PredConfigId(type='flow', dir='fwd', offset=0, channels=2, scale=self._scale, dist=1))
-        pred_config.add(nd.PredConfigId(type='iul_b_log', dir='fwd', offset=0, channels=2, scale=self._scale, dist=1, mod_func=self.iul_b_log_sigmoid))
-        nd.log('pred_config:')
-        nd.log(pred_config)
-        
-        pred_config[0].mod_func = lambda x: nd.ops.add(x, nd.ops.resample(out_ref.final.flow[0][1].fwd, reference=x, type='LINEAR', antialias=False))
-        pred_config[1].mod_func = lambda x: nd.ops.add(x, nd.ops.resample(out_ref.final.iul_b_log[0][1].fwd, reference=x, type='LINEAR', antialias=False))
-        
-        flow_merged_fwd = nd.ops.resample(out_ref.final.flow[0][1].fwd, reference=data.img[0], type='LINEAR', antialias=False)
-        flow_merged_iul_b_log = nd.ops.resample(out_ref.final.iul_b_log[0][1].fwd, reference=data.img[0], type='LINEAR', antialias=False)
-        img1_warped_merged = nd.ops.warp(data.img[1], flow_merged_fwd)
-        input = nd.ops.concat([data.img[0], data.img[1],  flow_merged_fwd, flow_merged_iul_b_log, img1_warped_merged])
-        
-        with nd.Scope('refNet2', **self.scope_args()):     
-            arch = Architecture_S(
-                num_outputs=pred_config.total_channels(),
-                disassembling_function=pred_config.disassemble,
-                conv_upsample=True,
-                loss_function= None,
-                channel_factor=self._channel_factor
-                )
-            out_ref = arch.make_graph(input)
-            
-        return out_ref
+        return out_merge
             
     def iul_b_log_sigmoid(self, value):
         sx, sy = nd.ops.slice(value, 1)
