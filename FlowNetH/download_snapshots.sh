@@ -12,3 +12,4 @@ download () {
 }
 
 download Pred-Merged-SS 00__flyingThings3D.train__S_fine_half 250000
+download Pred-Merged-FT-KITTI 00__kitti.all.train__S_short 130000
