@@ -11,5 +11,6 @@ download () {
 	wget "$URL_BASE/$subpath/snapshot-$state.meta" -P $subpath
 }
 
+download Pred-Merged 00__flyingThings3D.train__S_fine_half 130000
 download Pred-Merged-SS 00__flyingThings3D.train__S_fine_half 250000
 download Pred-Merged-FT-KITTI 00__kitti.all.train__S_short 130000
