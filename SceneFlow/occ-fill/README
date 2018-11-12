@@ -1,0 +1,2 @@
+c eval --imgs_t0 test_images/t0_imgL.png test_images/t0_imgR.png --imgs_t1 test_images/t1_imgL.png test_images/t1_imgR.png --dn_path ../../DispNet3/CSS-ft-kitti/ --fn_path ../../FlowNet3/CSS-ft-kitti/
+
