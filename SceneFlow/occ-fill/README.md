@@ -1,4 +1,4 @@
-# Network for filling disparity values in occluded regions
+## Network for filling disparity values in occluded regions
 
 Please download snapshots for FlowNet-CSS and DispNet-CSS first.
 Example command to generate interpolated output:
