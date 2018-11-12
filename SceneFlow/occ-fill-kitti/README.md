@@ -1,4 +1,4 @@
-# Network for filling disparity values in occluded regions (finetuned on KITTI)
+## Network for filling disparity values in occluded regions (finetuned on KITTI)
 
 Please download snapshots for FlowNet-CSS-kitti and DispNet-CSS-kitti first.
 Example command to generate interpolated output:
